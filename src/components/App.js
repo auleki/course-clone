@@ -9,22 +9,19 @@ import PageNotFound from './PageNotFound';
 import ManageCoursePage from './ManageCoursePage';
 
 const App = () => {
-    // const getPage = () => {    
-    //     const route = window.location.pathname;
-    //     if (route === "/about") return <AboutPage/>;
-    //     if (route === "/courses") return <CoursesPage />;
-    //     return <HomePage / >
-    // }
-
+       
+        const route = window.location.pathname;
+    
     return (
         <div className="container-fluid">
             <Header />
-            {/* { getPage() } */}
+        
             <Switch>
                 <Route path="/" exact component={HomePage} />
                 <Route path="/about" component={AboutPage} />
                 <Route path="/courses" component={CoursesPage} /> 
-                {/* <Redirect from="/about-old" to="/courses"/>  */}
+                <Route path="/course/:slug" component={ManageCoursePage} /> 
+                <Redirect from="/about-old" to="/about"/> 
                 <Route component={PageNotFound} />
 
             </Switch>

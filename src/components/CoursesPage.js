@@ -12,9 +12,6 @@ const CoursesPage = () => {
     }, []);
 
     
-    // const showError = () => {
-    //     console.log(courses);
-    // };
 
     
         return (

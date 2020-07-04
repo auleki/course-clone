@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const CourseList = props => {
+    // debugger;
+    // console.log(JSON.stringify(props));
+    // console.log(props.length);
   return(
     <table className="table">
     <thead>
@@ -16,7 +20,9 @@ const CourseList = props => {
         {props.courses.data.map(course => {
             return (
             <tr key={course.id}>
-                <td>{course.title}</td>
+                <td>
+                    <Link to={`/course/${course.slug}`}>{course.title}</Link> 
+                </td>
                 <td>{course.authorId}</td>
                 <td>{course.category}</td>
             </tr>
