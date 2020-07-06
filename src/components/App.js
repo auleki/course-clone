@@ -21,6 +21,7 @@ const App = () => {
                 <Route path="/about" component={AboutPage} />
                 <Route path="/courses" component={CoursesPage} /> 
                 <Route path="/course/:slug" component={ManageCoursePage} /> 
+                <Route path="/course" component={ManageCoursePage} /> 
                 <Redirect from="/about-old" to="/about"/> 
                 <Route component={PageNotFound} />
 
