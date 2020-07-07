@@ -30,13 +30,14 @@ export function saveCourse(course) {
             },
             body: JSON.stringify({
                 ...course,
-                // authorId: parseInt(course.id, 10)
+                authorId: parseInt(course.id, 10)
             })
         })
-        .then(console.log('saved data'))
-        // .then(handleResponse)
+        // .then(console.log('saved data'))
+        .then(handleResponse)
         .catch(handleError)
 };
+
 
 export function deleteCourse(courseId) {
     return fetch(baseUrl + courseId, {

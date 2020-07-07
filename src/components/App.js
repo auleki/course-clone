@@ -7,6 +7,8 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 // import CourseList from './CourseList';
 import PageNotFound from './PageNotFound';
 import ManageCoursePage from './ManageCoursePage';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
        
@@ -14,6 +16,8 @@ const App = () => {
     
     return (
         <div className="container-fluid">
+            <ToastContainer autoClose={3000} hideProgressBar />
+
             <Header />
         
             <Switch>
